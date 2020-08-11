@@ -12,14 +12,14 @@ namespace ComplexNumberCalculator
     struct ComplexNumber 
     {
         private long real;
-        private long imaginary;
+        private long imag;
 
         public long Real { get { return real; } }
-        public long Imaginary { get { return imaginary; } }
-        public ComplexNumber(long real, long imaginary)
+        public long Imag { get { return imag; } }
+        public ComplexNumber(long real, long imag)
         {
             this.real = real;
-            this.imaginary = imaginary;
+            this.imag = imag;
         }
 
         #region Operations
@@ -27,31 +27,31 @@ namespace ComplexNumberCalculator
         #region Logic
         public static bool operator ==(ComplexNumber numb1, ComplexNumber numb2)
         {
-            return (numb1.real == numb2.real) && (numb1.imaginary == numb2.imaginary); 
+            return (numb1.real == numb2.real) && (numb1.imag == numb2.imag); 
         }
         public static bool operator !=(ComplexNumber numb1, ComplexNumber numb2)
         {
-            return (numb1.real != numb2.real) || (numb1.imaginary != numb2.imaginary);
+            return (numb1.real != numb2.real) || (numb1.imag != numb2.imag);
         }
         #endregion
 
         #region Math
         public static ComplexNumber operator +(ComplexNumber numb1, ComplexNumber numb2)
         {
-            return new ComplexNumber(numb1.real + numb2.real, numb1.imaginary + numb2.imaginary);
+            return new ComplexNumber(numb1.real + numb2.real, numb1.imag + numb2.imag);
         }
 
         public static ComplexNumber operator -(ComplexNumber numb1, ComplexNumber numb2)
         {
-            return new ComplexNumber(numb1.real - numb2.real, numb1.imaginary - numb2.imaginary);
+            return new ComplexNumber(numb1.real - numb2.real, numb1.imag - numb2.imag);
         }
 
         public static ComplexNumber operator *(ComplexNumber numb1, ComplexNumber numb2)
         {
             // (ac - bd) + i(ad + bc)
             var result = new ComplexNumber(
-                numb1.real * numb2.real - numb1.imaginary * numb2.imaginary, 
-                numb1.real * numb2.imaginary + numb1.imaginary * numb2.real
+                numb1.real * numb2.real - numb1.imag * numb2.imag, 
+                numb1.real * numb2.imag + numb1.imag * numb2.real
                 );
 
             return result;
@@ -59,7 +59,7 @@ namespace ComplexNumberCalculator
 
         public static ComplexNumber operator /(ComplexNumber numb1, ComplexNumber numb2)
         {
-            return new ComplexNumber(numb1.real - numb2.real, numb1.imaginary - numb2.imaginary);
+            return new ComplexNumber(numb1.real - numb2.real, numb1.imag - numb2.imag);
         }
 
         #endregion
@@ -70,13 +70,13 @@ namespace ComplexNumberCalculator
 
         public override string ToString()
         {
-            if(imaginary > 0)
+            if(imag > 0)
             {
-                return $"{real}{imaginary}i";
+                return $"{real}{imag}i";
             }
             else
             {
-                return $"{real}+{imaginary}i";
+                return $"{real}+{imag}i";
             }
         }
 

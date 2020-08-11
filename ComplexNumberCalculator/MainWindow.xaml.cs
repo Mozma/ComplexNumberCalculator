@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ComplexNumberCalculator
 {
@@ -23,6 +11,44 @@ namespace ComplexNumberCalculator
         public MainWindow()
         {
             InitializeComponent();
+            new Presenter(this);
+        }
+
+        public event EventHandler AddEvent = null;
+        public event EventHandler SubEvent = null;
+        public event EventHandler MulEvent = null;
+        public event EventHandler DivEvent = null;
+        public event EventHandler EqlEvent = null;
+        public event EventHandler ClrEvent = null;
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddEvent.Invoke(sender, e);
+        }
+
+        private void btnSub_Click(object sender, RoutedEventArgs e)
+        {
+            SubEvent.Invoke(sender, e);      
+        }
+
+        private void btnMul_Click(object sender, RoutedEventArgs e)
+        {
+            MulEvent.Invoke(sender, e);
+        }
+
+        private void btnDiv_Click(object sender, RoutedEventArgs e)
+        {
+            DivEvent.Invoke(sender, e);
+        }
+
+        private void btnClr_Click(object sender, RoutedEventArgs e)
+        {
+            ClrEvent.Invoke(sender, e);
+        }
+
+        private void btnEql_Click(object sender, RoutedEventArgs e)
+        {
+            EqlEvent.Invoke(sender, e);
         }
     }
 }
