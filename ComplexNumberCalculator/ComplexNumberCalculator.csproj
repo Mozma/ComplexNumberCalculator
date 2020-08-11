@@ -99,5 +99,8 @@
   <ItemGroup>
     <Resource Include="ABSTRCT4.BMP" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\copy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

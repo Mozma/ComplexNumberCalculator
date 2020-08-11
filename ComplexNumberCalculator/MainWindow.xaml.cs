@@ -18,9 +18,9 @@ namespace ComplexNumberCalculator
         public event EventHandler SubEvent = null;
         public event EventHandler MulEvent = null;
         public event EventHandler DivEvent = null;
-        public event EventHandler EqlEvent = null;
         public event EventHandler ClrEvent = null;
-
+        public event EventHandler CopyEvent = null;
+     
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             AddEvent.Invoke(sender, e);
@@ -46,9 +46,9 @@ namespace ComplexNumberCalculator
             ClrEvent.Invoke(sender, e);
         }
 
-        private void btnEql_Click(object sender, RoutedEventArgs e)
+        private void btnCopy_Click(object sender, RoutedEventArgs e)
         {
-            EqlEvent.Invoke(sender, e);
+            CopyEvent.Invoke(sender, e);
         }
     }
 }

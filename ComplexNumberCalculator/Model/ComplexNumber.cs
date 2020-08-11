@@ -70,7 +70,7 @@ namespace ComplexNumberCalculator
 
         public override string ToString()
         {
-            if(imag > 0)
+            if(imag < 0)
             {
                 return $"{real}{imag}i";
             }
