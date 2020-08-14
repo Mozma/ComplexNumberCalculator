@@ -1,22 +1,13 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ComplexNumberCalculator
+﻿namespace ComplexNumberCalculator
 {
     struct ComplexNumber 
     {
-        private long real;
-        private long imag;
+        private decimal real;
+        private decimal imag;
 
-        public long Real { get { return real; } }
-        public long Imag { get { return imag; } }
-        public ComplexNumber(long real, long imag)
+        public decimal Real { get { return real; } }
+        public decimal Imag { get { return imag; } }
+        public ComplexNumber(decimal real, decimal imag)
         {
             this.real = real;
             this.imag = imag;

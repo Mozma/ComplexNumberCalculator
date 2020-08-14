@@ -23,11 +23,11 @@
             </StackPanel>
         </Button>
         <Button x:Name="btnClr" Content="С" Grid.Column="1" HorizontalAlignment="Left" Margin="359,310,0,0" VerticalAlignment="Top" Width="62" Height="58" FontSize="24" Background="White" Click="btnClr_Click"/>
-        <TextBox x:Name="tbOper1Real" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="100,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20"/>
-        <TextBox x:Name="tbOper2Real" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="100,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20"/>
+        <TextBox x:Name="tbOper1Real" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="100,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" MaxLength="100" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <TextBox x:Name="tbOper2Real" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="100,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" MaxLength="100" PreviewTextInput="TextBox_PreviewTextInput"/>
         <Label Grid.ColumnSpan="2" Content="Complex number calculator" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="tbOper1Imag" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="359,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20"/>
-        <TextBox x:Name="tbOper2Imag" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="359,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20"/>
+        <TextBox x:Name="tbOper1Imag" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="359,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" MaxLength="100" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <TextBox x:Name="tbOper2Imag" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="359,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" MaxLength="100" PreviewTextInput="TextBox_PreviewTextInput"/>
         <TextBox x:Name="tbResultReal" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="100,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" IsReadOnly="True"/>
         <TextBox x:Name="tbResultImag" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="359,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="20" IsReadOnly="True"/>
         <Label Grid.ColumnSpan="2" Content="Result: " HorizontalAlignment="Left" Margin="22,189,0,0" VerticalAlignment="Top" FontSize="20" Height="38"/>
